@@ -13,13 +13,13 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Level
+  - Enemy
+  - Usable
+  - Pickup
+  - IgnorePlayer
+  - Player
+  - PlayerDrop
   - 
   - 
   - 

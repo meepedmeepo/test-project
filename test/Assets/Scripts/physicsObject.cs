@@ -5,17 +5,19 @@ using UnityEngine;
 public class physicsObject : MonoBehaviour {
 
     public float gravityModifier = 1f;
+    protected const float minDistance = 0.001f;
 
     protected Vector2 velocity;
 
     protected Rigidbody2D rb2d;
 
-    // Use this for initialization
-    void OnEnable()
+   void OnEnable()
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -35,6 +37,11 @@ public class physicsObject : MonoBehaviour {
 
     void Movement(Vector2 move)
     {
+        float distance = move.magnitude;
+        if (distance > minDistance)
+        {
+
+        }
         rb2d.position = rb2d.position + move;
     }
 
